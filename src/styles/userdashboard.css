@@ -1,0 +1,118 @@
+.dashboard-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #f8f9fa;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .segment-inputs {
+    display: flex;
+    gap: 30px; /* This adds a visible gap between Segment No and Count */
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  
+  .segment-inputs > div {
+    flex: 1;
+    min-width: 43%;
+  }
+  
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn {
+    background-color: #28a745;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .segment-list {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 20px;
+      margin: 20px 10px;
+    }
+  
+    .segment-inputs {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .segment-inputs > div {
+      min-width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 20px;
+    }
+  
+    input, select {
+      font-size: 14px;
+      padding: 6px 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .dashboard-container {
+      padding: 15px;
+    }
+  }
+  

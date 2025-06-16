@@ -1,0 +1,150 @@
+.dashboard-container {
+    padding: 2rem;
+    background: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .dashboard-container h2 {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tr.approved {
+    background-color: #d4edda; /* light green */
+  }
+  
+  tr.blocked {
+    background-color: #f8d7da; /* light red */
+  }
+  
+  .progress-section {
+    margin-top: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+  
+  .progress-bar {
+    height: 18px;
+    background: #28a745;
+    border-radius: 4px;
+    margin-top: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-bar.danger {
+    background: #dc3545;
+  }
+  .chart-wrapper {
+    margin: 2rem 0;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .approved {
+    background-color: #d4edda;
+  }
+  
+  .locked {
+    background-color: #f8d7da;
+  }
+  
+  .pending {
+    background-color: #fff3cd;
+  }
+  .fetch-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 16px 0;
+    cursor: pointer;
+  }
+  
+  .fetch-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .data-section table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .data-section th, .data-section td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 1rem;
+    }
+  
+    table, .data-section table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .chart-wrapper,
+    .progress-section {
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+  
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .fetch-btn {
+      width: 100%;
+      font-size: 15px;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-container h2 {
+      font-size: 20px;
+    }
+  
+    th, td {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    .fetch-btn {
+      font-size: 14px;
+    }
+  
+    .progress-bar {
+      height: 14px;
+    }
+  }
+  
