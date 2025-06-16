@@ -12,7 +12,7 @@ function App() {
   const [adminExists, setAdminExists] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/admin/exists')
+    axios.get('https://task-server-1-vfdn.onrender.com/admin/exists')
       .then(res => setAdminExists(res.data.exists))
       .catch(() => setAdminExists(false));
   }, []);
