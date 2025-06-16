@@ -203,72 +203,34 @@ tr:hover {
 }
 
 /* Responsive Adjustments */
-/* Additional Responsive Enhancements */
 @media (max-width: 768px) {
-  .segment-inputs {
+  .admin-wrapper {
     flex-direction: column;
-    gap: 12px;
   }
 
-  .segment-inputs > div {
+  .sidebar {
     width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.5rem;
   }
 
-  .sidebar button {
-    flex: 1 1 45%;
-    max-width: 180px;
+  .container {
+    margin: 0;
+    border-radius: 0;
+    padding: 1rem;
   }
 
-  .container h2 {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .form-box {
-    padding: 0;
-    margin: 0 auto;
+  input,
+  select,
+  button {
     width: 100%;
+    max-width: 100%;
   }
 
-  ul li {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  th, td {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar button {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .container h2 {
-    font-size: 20px;
-  }
-
-  .container h3 {
-    font-size: 18px;
-  }
-
-  button, input, select {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .unlock-btn {
-    padding: 5px 8px;
-    font-size: 13px;
-  }
-
-  .segment-inputs {
-    gap: 10px;
-  }
-
-  ul li {
-    font-size: 14px;
+  ul {
+    max-width: 100%;
   }
 }
