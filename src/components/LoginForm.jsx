@@ -12,7 +12,7 @@ function LoginForm() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', { email, password });
+      const res = await axios.post('https://task-server-1-vfdn.onrender.com/api/admin/login', { email, password });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('userEmail', email);
       navigate('/admin');
@@ -22,7 +22,7 @@ function LoginForm() {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://task-server-1-vfdn.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('userEmail', email);
       navigate('/user');

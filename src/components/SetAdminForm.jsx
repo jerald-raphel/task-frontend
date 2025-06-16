@@ -9,7 +9,7 @@ function SetAdminForm() {
   const handleCreateAdmin = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/admin/register', { email, password });
+      await axios.post('https://task-server-1-vfdn.onrender.com/api/admin/register', { email, password });
       alert('Admin created! Please login.');
       window.location.reload();
     } catch (err) {

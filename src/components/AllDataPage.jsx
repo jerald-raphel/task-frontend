@@ -9,8 +9,8 @@ const AllDataPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const contractRes = await axios.get('http://localhost:5000/api/contracts');
-        const shipmentRes = await axios.get('http://localhost:5000/api/shipments');
+        const contractRes = await axios.get('https://task-server-1-vfdn.onrender.com/api/contracts');
+        const shipmentRes = await axios.get('https://task-server-1-vfdn.onrender.com/api/shipments');
         setContracts(contractRes.data);
         setShipments(shipmentRes.data);
       } catch (err) {

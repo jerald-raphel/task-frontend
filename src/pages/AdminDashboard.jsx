@@ -21,7 +21,7 @@ const AdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/auth/users');
+      const res = await axios.get('https://task-server-1-vfdn.onrender.com/api/auth/users');
       setUsers(res.data);
     } catch {
       alert('Failed to fetch users');
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
 
   const handleAddUser = async () => {
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post('https://task-server-1-vfdn.onrender.com/api/auth/register', {
         name, email, password
       });
       alert('User added');
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
 
   const handleAddContract = async () => {
     try {
-      await axios.post('http://localhost:5000/api/contracts', {
+      await axios.post('https://task-server-1-vfdn.onrender.com/api/contracts', {
         contractId,
         deviceCount,
         status
@@ -55,10 +55,10 @@ const AdminDashboard = () => {
 
   const fetchAllData = async () => {
     try {
-      const contractsRes = await axios.get('http://localhost:5000/api/contracts');
+      const contractsRes = await axios.get('https://task-server-1-vfdn.onrender.com/api/contracts');
       setContracts(contractsRes.data);
 
-      const shipmentsRes = await axios.get('http://localhost:5000/api/shipments');
+      const shipmentsRes = await axios.get('https://task-server-1-vfdn.onrender.com/api/shipments');
       setShipments(shipmentsRes.data);
     } catch {
       alert('Failed to load data');
@@ -237,7 +237,7 @@ const AdminDashboard = () => {
                                 className="unlock-btn"
                                 onClick={async () => {
                                   try {
-                                    await axios.put(`http://localhost:5000/api/contracts/${c.contractId}/unlock`);
+                                    await axios.put(`https://task-server-1-vfdn.onrender.com/api/contracts/${c.contractId}/unlock`);
                                     alert('Contract unlocked successfully!');
                                     fetchAllData();
                                   } catch {

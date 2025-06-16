@@ -24,7 +24,7 @@ const RealTimeDashboard = () => {
     const fetchDashboardStats = async () => {
       try {
         // Fetch contract status distribution
-        const contractRes = await axios.get('http://localhost:5000/api/contracts');
+        const contractRes = await axios.get('https://task-server-1-vfdn.onrender.com/api/contracts');
         const allContracts = contractRes.data;
   
         const statusCounts = {
@@ -46,7 +46,7 @@ const RealTimeDashboard = () => {
         ]);
   
         // ✅ Fetch overall shipped vs total device count
-        const ratioRes = await axios.get('http://localhost:5000/api/stats/device-to-shipment');
+        const ratioRes = await axios.get('https://task-server-1-vfdn.onrender.com/api/stats/device-to-shipment');
         const { totalDeviceCount, totalShipmentCount } = ratioRes.data;
   
         const percent = (totalShipmentCount / totalDeviceCount) * 100;

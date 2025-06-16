@@ -12,7 +12,7 @@ const UserDashboard = () => {
   const userEmail = localStorage.getItem('userEmail');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/contracts')
+    axios.get('https://task-server-1-vfdn.onrender.com/api/contracts')
       .then(res => {
         const pending = res.data.filter(c => c.status === 'pending');
         setContracts(pending);
@@ -37,7 +37,7 @@ const UserDashboard = () => {
     if (!selectedContractId || total === 0) return alert('Invalid submission');
 
     try {
-      const shipmentRes = await axios.post('http://localhost:5000/api/shipments', {
+      const shipmentRes = await axios.post('https://task-server-1-vfdn.onrender.com/api/shipments', {
         contractId: selectedContractId,
         shipmentNo: `S${segments.length}-${Date.now()}`,
         count: total,
@@ -61,7 +61,7 @@ const UserDashboard = () => {
       };
 
       try {
-        await axios.post('http://localhost:5000/api/contract-alert', emailPayload);
+        await axios.post('https://task-server-1-vfdn.onrender.com/api/contract-alert', emailPayload);
         alert("Admin has been notified via email.");
       } catch (emailErr) {
         console.error("Email sending failed:", emailErr);
